@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
+import { Category3DCarousel } from './components/Category3DCarousel';
 import { CollectionsShowcase } from './components/CollectionsShowcase';
 import { FabricInspector } from './components/FabricInspector';
 import { ManufacturingPillars } from './components/ManufacturingPillars';
@@ -43,14 +44,20 @@ export default function App() {
 
       {/* Main Page Body */}
       <main className="flex-1">
-        {/* 1. Hero / Connect with Excellence (Matches Image 8 & Image 1) */}
+        {/* 1. Hero / Connect with Excellence (Big Screen Presentation) */}
         <HeroSection
           onOpenQuoteModal={handleOpenQuoteModal}
           onOpenLookbook={handleOpenLookbook}
           onScrollToSection={handleScrollToSection}
         />
 
-        {/* 2. Collections Portfolio (Matches Image 1, 3, 4, 5) */}
+        {/* 2. 3D Category Sector Carousel (Shown Directly Below Hero Section) */}
+        <Category3DCarousel
+          onOpenQuoteModal={handleOpenQuoteModal}
+          onOpenLookbook={handleOpenLookbook}
+        />
+
+        {/* 3. Collections Portfolio (Matches Image 1, 3, 4, 5) */}
         <CollectionsShowcase
           onOpenQuoteModal={handleOpenQuoteModal}
           onOpenLookbook={handleOpenLookbook}
